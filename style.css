@@ -1,0 +1,263 @@
+/* AJUSTE INICIAL DA PÁGINA */
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+} /* FIM DO AJUSTE */
+
+
+/* INICIO DA ESTILIZAÇÃO DO CABEÇALHO */
+header{
+  background: rgb(0, 0, 0)fff;
+  color: #fff;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  text-align: center;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+  justify-content: space-between;
+  display: flex;
+  align-items: center;
+}
+
+header h1 {
+  font-size: 3rem;
+  background-color: rgb(0, 0, 0);
+  padding: 0.5rem;
+  color: #ffffff;
+  text-align: center;
+}
+
+.conteudotopo{
+  background-color: #000000;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  max-width: 2800px;
+  margin: 0 auto;
+  justify-content:center;
+  z-index: 1050;
+}
+
+/* AJUSTE NA FOTO PARA FICAR REDONDA E COM BORDA AMARELADA */
+.foto-pessoal{
+  border-radius: 50%;
+  width: 120px;
+  height: 120px;
+  object-fit:contain;
+  border: 3px solid #f3c706;
+  margin-left: 0.5rem;
+  margin-top: 0.5rem;
+} /* FIM DA ESTILIZAÇÃO DA FOTO */
+/* FIM DA ESTILIZAÇÃO DO CABEÇALHO */
+
+
+/* INÍCIO DA ESTILIZAÇÃO DA NAVEGAÇÃO DAS SEÇÕES */
+.navbar{
+  color: #000000;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  position: absolute;
+  top: 120px;
+  left: 0;
+  z-index: 999;
+  background-color: rgb(0, 0, 0);
+}
+
+.navbar ul{
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+}
+
+.navbar a{
+  position: relative;
+  color: rgb(255, 255, 255);
+  text-decoration: none;
+  padding: 1rem;
+  display: block;
+  text-align: center;
+}
+
+/* INÍCIO DO CÓDIGO DO EFEITO AO PASSAR O MOUSE NA SEÇÃO QUE DESEJA VISUALIZAR */
+.navbar a::after{
+  content: " ";
+  width: 0%;
+  height: 2px;
+  background-color: #ffffff;
+  position: absolute;
+  bottom: 20%;
+  left: 0%;
+  transition: width 0.1s ease-in-out;
+}
+
+.navbar a:hover::after{
+  width: 100%;
+ } /*FIM DO EFEITO */
+
+.navbar li{
+  margin: 0 1rem;
+ } /* FIM DA ESTILIZAÇÃO DA NAVEGAÇÃO DAS SEÇÕES */
+
+
+/* ESTILIZAÇÃO DO BODY */
+html, body{ /* ADIÇÃO DA FONTE */
+  font-family: "Noto Sans", sans-serif;
+  font-size: 20px;
+  display: flex;
+  margin: 0;
+  flex-direction: column;
+}
+
+body{ /* ADIÇÃO DA IMAGEM DE FUNDO */
+  color: #ffffff;
+  background-image: url(img/906103f26892039f53fa20f0736017cd-1274363879.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position:center;
+  flex: 1;
+}
+
+body p{
+  text-shadow: 0.5px 6px 6px rgb(0, 0, 0);
+  margin: 0.5rem 0;
+  line-height: 2rem;
+} 
+
+main {
+  flex: 1;
+  padding: 5rem 1rem 1rem;
+  margin-top: 5rem;
+}
+
+span{/* ÊNFASE NO NOME E OUTRAS INFORMAÇÕES */
+  color: #f3c706;
+} /* FIM DA ÊNFASE */
+/* FIM DA ESTILIZAÇÃO DO BODY */
+
+
+/* ESTILIZAÇÃO DAS SEÇÕES */
+section h2{
+  text-shadow: 3px 3px 3px rgb(0, 0, 0);
+  font-size: 45px;
+  margin: 1rem 0;
+  font-style: italic;
+}
+
+section h3{
+  text-shadow: 0.5px 4px 4px rgb(0, 0, 0);
+  font-style: oblique;
+  color: #f3c706;
+}
+
+/* EFEITO DAS SEÇÕES PARA QUE FIQUEM COM O FUNDO TRANSPARENTE, TRAZENDO MAIS VISIBILIDADE AO CONTÉUDO */
+section{
+  text-shadow: 1px 1px 1px rgb(0, 0, 0);
+  border-style:ridge;
+  border-color: #adada1;
+  margin: 2rem 0;
+  padding: 1rem;
+
+
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0));
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(5px);
+  border-radius: 20px;
+  border:1px solid rgba(255, 255, 255, 0.18);
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+} /* FIM DO EFEITO */
+/* FIM DA ESTILIZAÇÃO DAS SEÇÕES */
+
+
+/* ESTILIZAÇÃO DO FORMULÁRIO */
+#form{
+  padding: 1rem;
+  width: 100%;
+  max-width: 450px;
+  border: 1px solid rgb(255, 255, 255);
+  border-radius: 20px;
+  margin: 1rem auto;
+}
+
+#form div {
+  margin-bottom: 1rem;
+}
+
+#form label {
+  display: block;
+  margin-bottom: 0.5rem;
+}
+
+#form input, #form textarea {
+  width: 100%;
+  padding: 0.75rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+#form textarea {
+  resize: vertical;
+} 
+#titulocontato{
+  font-size: 2.25rem;
+}
+
+#frasecontato, #titulocontato{
+  text-align: center;
+}
+
+/* ESTILIZAÇÃO DO BOTÃO (ENVIAR) DO FORMULÁRIO */
+button {
+  background-color: #000000;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 0.6rem 1rem;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background-color 0.16s ease;
+}
+
+button:hover {
+  background-color: #9e9e9e;
+} /* FIM DA ESTILIZAÇÃO DO BOTÃO */
+
+/* ESTILIZAÇÃO DO (CLIQUE AQUI) NA SEÇÃO PROJETOS */
+#drive{
+  text-shadow: 6px 6px 6px rgb(0, 0, 0);
+  color: #f3c706;
+  font-style: italic;
+} /* FIM DA ESTILIZAÇÃO */ 
+/* FIM DA ESTILIZAÇÃO DO FORMULÁRIO */
+
+
+/* ESTILIZAÇÃO DO RODAPÉ */
+footer {
+  background: #333;
+  color: #fff;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: auto;
+  padding: 0.5rem;
+}
+
+footer img {
+  width: 35px;
+  margin: 0 8px;
+}
+
+footer p {
+  margin: 0;
+  font-size: 0.8rem;
+} /* FIM DA ESTILIZAÇÃO DO RODAPÉ */
+/* FIM DO CÓDIGO */
+
+
+
